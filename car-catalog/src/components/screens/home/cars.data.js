@@ -3,6 +3,6 @@ export const cars = [
         id: 1,
         name: 'Camry',
         price: '24970',
-        image: '2.png',
+        image: 'http://localhost:4200/images/2.png',
     },
 ]
