@@ -1,0 +1,10 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "name": "Camry",
+      "price": 24970,
+      "image": "http://localhost:4200/images/2.png"
+    }
+  ]
+}
