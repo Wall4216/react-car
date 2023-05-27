@@ -1,7 +1,7 @@
 import styles from './CreateCarForm.module.css'
 import {useState} from "react";
 
-const CreateCarForm = () => {
+const CreateCarForm = ({setCars}) => {
 
     const [name, setName] = useState('')
     const [price, setPrice] = useState('')
@@ -10,6 +10,7 @@ const CreateCarForm = () => {
     const createCar = e => {
         e.preventDefault()
         console.log({name,price,image})
+        setCars(prev => [...prev, {id: prev.length + 1, name, price, image }])
     }
     return <form className={styles.form}>
         <input placeholder='Name' onChange={e => setName(e.target.value)} value={name}/>
