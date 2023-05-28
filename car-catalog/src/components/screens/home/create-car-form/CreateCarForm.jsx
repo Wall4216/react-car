@@ -1,22 +1,19 @@
 import styles from './CreateCarForm.module.css';
 import { useState } from 'react';
 
+const clearData = {
+    price: '',
+    name: '',
+    image: ''
+}
 const CreateCarForm = ({ setCars }) => {
-    const [data, setData] = useState({
-        price: '',
-        name: '',
-        image: ''
-    });
+    const [data, setData] = useState(clearData);
 
     const createCar = e => {
         e.preventDefault();
         console.log(data);
         setCars(prev => [...prev, { id: prev.length + 1, ...data }]);
-        setData({
-            price: '',
-            name: '',
-            image: ''
-        });
+        setData(clearData);
     };
 
     return (
