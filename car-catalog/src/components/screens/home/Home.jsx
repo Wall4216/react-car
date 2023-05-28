@@ -7,6 +7,7 @@ import CarItem from "./car-item/CarItem";
 import CreateCarForm from "./create-car-form/CreateCarForm.jsx";
 import axios from "axios";
 import { CarService } from '../../../services/car.service.js';
+import {useNavigate} from "react-router-dom";
 function Home() {
     const [cars, setCars] = useState([]);
 
@@ -20,10 +21,11 @@ function Home() {
 
         fetchData();
     }, []);
-
+    const nav = useNavigate()
     return (
         <div>
             <h1>Cars catalog</h1>
+            <button onClick={() => nav('/car/1')}>go</button>
             <CreateCarForm setCars={setCars}></CreateCarForm>
             <div>
                 {cars.length ? (
