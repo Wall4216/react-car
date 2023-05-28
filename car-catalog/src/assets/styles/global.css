@@ -11,3 +11,23 @@ body {
 h1 {
     margin-bottom: 10px;
 }
+
+.btn {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: #111;
+    background-color: #4c566a;
+    max-width: 100px;
+}
+.btn:hover {
+    background-color: #bcd1e6;
+}

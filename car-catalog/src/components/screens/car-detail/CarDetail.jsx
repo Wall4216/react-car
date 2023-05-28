@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import { useEffect, useState } from "react";
 import { CarService } from "../../../services/car.service.js";
 import CarItem from "../home/car-item/CarItem.jsx";
@@ -19,7 +19,12 @@ const CarDetail = () => {
         fetchData();
     }, [id]);
 if (!car?.name) return <p>Loading...</p>
-    return <div><CarItem car={car}/></div>;
+    return (
+        <div>
+     <Link to='/'>Back</Link>
+    <CarItem car={car}/>
+        </div>
+)
 };
 
 export default CarDetail;
