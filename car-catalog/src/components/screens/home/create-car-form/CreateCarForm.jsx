@@ -1,5 +1,5 @@
 import styles from './CreateCarForm.module.css';
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 
 const clearData = {
     price: '',
