@@ -25,7 +25,7 @@ function Home() {
     return (
         <div>
             <h1>Cars catalog</h1>
-            <button onClick={() => nav('/car/1')}>go</button>
+             <button onClick={() => nav('/car/1')}>go</button>
             <CreateCarForm setCars={setCars}></CreateCarForm>
             <div>
                 {cars.length ? (

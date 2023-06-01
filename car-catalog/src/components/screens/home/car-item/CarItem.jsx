@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../Home.module.css";
 import {Link} from "react-router-dom";
+import Price from "./Price.jsx";
 
 function CarItem({ car }) {
     return (
@@ -10,13 +11,7 @@ function CarItem({ car }) {
                 style={{ backgroundImage: `url(${car.image})` }}
             ></div>
             <h2>{car.name}</h2>
-            <p>
-                {new Intl.NumberFormat("en-US", {
-                    style: "currency",
-                    currency: "USD",
-                    currencyDisplay: "narrowSymbol",
-                }).format(car.price)}
-            </p>
+                <Price price={car.price}/>
             <Link className='btn' to={`/car/${car.id}`}>Read more</Link>
         </div>
     );
